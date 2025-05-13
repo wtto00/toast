@@ -1,0 +1,7 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["@vitest/browser/context", "@vitest/browser/providers/playwright"]
+  },
+  "include": [".", "../vitest.setup.ts"]
+}

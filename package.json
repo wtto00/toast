@@ -1,6 +1,7 @@
 {
   "name": "@wtto00/toast",
-  "version": "0.1.0",
+  "description": "A simple toast notification library for the browser.",
+  "version": "0.1.1",
   "type": "module",
   "exports": {
     ".": {
@@ -10,6 +11,7 @@
   },
   "types": "./dist/index.d.ts",
   "files": ["dist"],
+  "keywords": ["toast", "loading"],
   "scripts": {
     "build": "rslib build",
     "check": "biome check --write",

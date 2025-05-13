@@ -1,6 +1,6 @@
 {
-  "name": "toast",
-  "version": "1.0.0",
+  "name": "@wtto00/toast",
+  "version": "0.1.0",
   "type": "module",
   "exports": {
     ".": {

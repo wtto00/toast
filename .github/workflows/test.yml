@@ -24,8 +24,11 @@ jobs:
       - name: Install Dependencies
         run: pnpm i
 
-      - name: Test
+      - name: Biome
         run: pnpx biome ci
+
+      - name: Prepare Playwright
+        run: pnpm exec playwright install
 
       - name: Test
         run: pnpm test

@@ -1,7 +1,7 @@
 {
   "name": "@wtto00/toast",
   "description": "A simple toast notification library for the browser.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "exports": {
     ".": {

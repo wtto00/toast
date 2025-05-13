@@ -23,10 +23,22 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+
+      - run: corepack enable
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: "pnpm"
+          cache-dependency-path: pnpm-lock.yaml
           registry-url: "https://registry.npmjs.org"
+
+      - name: Install Dependencies
+        run: pnpm i
+
+      - name: Build
+        run: pnpm build
+
       - run: git config --global user.name "wtto00"
       - run: git config --global user.email "wtto00@outlook.com"
       - run: npm publish --access public
@@ -45,7 +57,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: "pnpm"
+          cache-dependency-path: pnpm-lock.yaml
           registry-url: "https://npm.pkg.github.com"
+      - name: Install Dependencies
+        run: pnpm i
+
+      - name: Build
+        run: pnpm build
+
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
